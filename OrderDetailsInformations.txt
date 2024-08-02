@@ -1,2 +1,5 @@
 1.SELECT Products.ProductName AS '제품명',  Products.Price AS '가격', OrderDetails.Quantity AS '개수', Customers.CustomerName AS '고객명' FROM (Products INNER JOIN OrderDetails ON Products.ProductID = OrderDetails.ProductID) INNER JOIN (Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID) ON OrderDetails.OrderID = Orders.OrderID;
-2.
+2.가장 많이 주문 받은 회사 직원명과 갯수
+3.CustomerName별로 주문 갯수 표시 - 연결 키는 각자 찾기
+4. SELECT CATEGORYID, COUNT(CATEGORYID) AS CC FROM PRODUCTS GROUP BY CATEGORYID HAVING COUNT(CATEGORYID) > 10;
+5.CategoryName가 Produce, Beverages 제품에 갯수 각각 표시 - 결과 표시
